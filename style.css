@@ -343,6 +343,32 @@ p{ max-width:62ch; }
 .map{ border-radius:var(--r-md); overflow:hidden; margin-top:28px; background:var(--mist); }
 .map svg{ display:block; width:100%; height:auto; }
 
+/* GCC-led hero */
+.hero h1{ max-width:11ch; }
+.hero .hero-top{ grid-template-columns:1fr 1fr; }
+@media (max-width:960px){ .hero .hero-top{ grid-template-columns:1fr; } }
+.hero .kicker{ margin-bottom:22px; }
+.hero-side .hero-tag{ font-size:20px; font-weight:500; color:var(--ink); letter-spacing:-0.01em; margin-bottom:14px; }
+.hero-visual.gcc-visual{
+  background:var(--ink-deep); display:flex; justify-content:flex-end; align-items:flex-end;
+}
+.hero-visual.gcc-visual::before{
+  content:''; position:absolute; left:-10%; top:-40%; width:75%; height:160%;
+  background:radial-gradient(closest-side, rgba(62,111,196,.45), transparent 70%); pointer-events:none;
+}
+.hero-visual.gcc-visual img{ position:relative; width:auto; height:100%; max-width:none; object-fit:contain; object-position:right bottom; }
+.gcc-img.framed{ margin-right:0; align-self:center; border-radius:var(--r-lg); overflow:hidden; aspect-ratio:4/3; }
+.gcc-img.framed img{ height:100%; object-fit:cover; -webkit-mask-image:none; mask-image:none; }
+.gcc .gcc-top{ padding-bottom:64px; align-items:center; }
+.gcc .gcc-top .gcc-copy{ padding-bottom:0; }
+@media (max-width:960px){
+  .gcc-img.framed{ margin:0 0 8px; max-width:none; }
+}
+@media (max-width:640px){
+  .hero-visual.gcc-visual{ aspect-ratio:4/3.2; }
+  .hero-stats b{ font-size:19px; }
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width:1080px){
   .menu{ gap:0; }
